@@ -14,14 +14,25 @@ export default function Home() {
       {/* Hero */}
       <section className="py-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-6xl font-bold mb-8 tracking-tight">
-            Deine digitale
-            <br />
-            <span className="text-gray-400">Visitenkarte.</span>
-          </h1>
-          <p className="text-xl text-gray-500 max-w-xl">
-            Immer griffbereit. Auf jedem Handy. Ohne App.
-          </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-6xl font-bold mb-8 tracking-tight">
+                Deine digitale
+                <br />
+                <span className="text-gray-400">Visitenkarte.</span>
+              </h1>
+              <p className="text-xl text-gray-500">
+                Immer griffbereit. Auf jedem Handy. Ohne App.
+              </p>
+            </div>
+            <div>
+              {/* PLATZHALTER: Phone Mockup */}
+              <div className="bg-gray-100 rounded-3xl p-4 aspect-[9/16] max-w-[280px] mx-auto flex flex-col items-center justify-center border-2 border-dashed border-gray-300">
+                <span className="text-gray-400 text-sm font-medium">📱 Platzhalter:</span>
+                <span className="text-gray-400 text-xs text-center mt-1">Handy mit CCQ-Karte</span>
+              </div>
+            </div>
+          </div>
           <div className="mt-16 bg-gray-50 p-8 rounded-none border-l-4 border-black">
             <p className="text-gray-700">
               CCQ ist eine digitale Visitenkarte, die man <strong>nicht nur anschaut</strong> — man speichert sie.
@@ -37,84 +48,140 @@ export default function Home() {
           <div className="space-y-12">
             <div className="flex gap-8 items-start">
               <span className="text-4xl font-bold text-gray-200">01</span>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">Profil</h3>
                 <p className="text-gray-500">Wer du bist. Was du machst. Wie man dich erreicht.</p>
+                {/* PLATZHALTER: Profil-Beispiel */}
+                <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
+                  <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Profil-Bereich</span>
+                </div>
               </div>
             </div>
             <div className="flex gap-8 items-start">
               <span className="text-4xl font-bold text-gray-200">02</span>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">Charakter</h3>
                 <p className="text-gray-500">Die Geschichte dahinter. Deine Werte.</p>
+                {/* PLATZHALTER: Charakter-Beispiel */}
+                <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
+                  <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Charakter-Bereich</span>
+                </div>
               </div>
             </div>
             <div className="flex gap-8 items-start">
               <span className="text-4xl font-bold text-gray-200">03</span>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">Team / Netzwerk</h3>
                 <p className="text-gray-500">Dein Team, deine Partner oder deine Zielgruppe.</p>
+                {/* PLATZHALTER: Team-Beispiel */}
+                <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
+                  <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Team/Netzwerk</span>
+                </div>
               </div>
             </div>
             <div className="flex gap-8 items-start">
               <span className="text-4xl font-bold text-gray-200">04</span>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">Angebot</h3>
                 <p className="text-gray-500">Was du bietest. Klar und übersichtlich.</p>
+                {/* PLATZHALTER: Angebot-Beispiel */}
+                <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
+                  <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Angebot/Speisekarte</span>
+                </div>
               </div>
             </div>
             <div className="flex gap-8 items-start">
               <span className="text-4xl font-bold text-gray-200">05</span>
-              <div>
+              <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">Specials</h3>
                 <p className="text-gray-500">Das Besondere. Tipps, Wissen, Geschenke.</p>
+                {/* PLATZHALTER: Specials-Beispiel */}
+                <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
+                  <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Specials-Bereich</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3 Schritte */}
+      {/* So funktioniert es — mit QR-Code Bild */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-16">So funktioniert es</h2>
-          <div className="grid gap-4 md:grid-cols-3">
-            <div className="border border-gray-200 p-8">
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="border border-gray-200 p-8 text-center">
               <div className="text-5xl font-bold text-gray-100 mb-4">01</div>
               <h3 className="text-lg font-bold">Scannen</h3>
+              {/* PLATZHALTER: QR-Code */}
+              <div className="mt-4 bg-gray-100 rounded-xl p-4 border-2 border-dashed border-gray-300 aspect-square max-w-[120px] mx-auto flex items-center justify-center">
+                <span className="text-gray-400 text-xs">📷 QR-Code</span>
+              </div>
             </div>
-            <div className="border border-gray-200 p-8">
+            <div className="border border-gray-200 p-8 text-center">
               <div className="text-5xl font-bold text-gray-100 mb-4">02</div>
               <h3 className="text-lg font-bold">Speichern</h3>
+              {/* PLATZHALTER: Speichern Animation */}
+              <div className="mt-4 bg-gray-100 rounded-xl p-4 border-2 border-dashed border-gray-300 aspect-square max-w-[120px] mx-auto flex items-center justify-center">
+                <span className="text-gray-400 text-xs">📷 Speichern</span>
+              </div>
             </div>
-            <div className="border border-gray-200 p-8">
+            <div className="border border-gray-200 p-8 text-center">
               <div className="text-5xl font-bold text-gray-100 mb-4">03</div>
               <h3 className="text-lg font-bold">Immer dabei</h3>
+              {/* PLATZHALTER: Kontakte-App */}
+              <div className="mt-4 bg-gray-100 rounded-xl p-4 border-2 border-dashed border-gray-300 aspect-square max-w-[120px] mx-auto flex items-center justify-center">
+                <span className="text-gray-400 text-xs">📷 Kontakt</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Für wen */}
+      {/* Für wen — mit Bildern */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-16">Für wen?</h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            <div className="bg-white border border-gray-200 p-8">
-              <h3 className="text-lg font-bold mb-2">🍽️ Restaurant</h3>
-              <p className="text-gray-500">Speisekarte, Öffnungszeiten, Reservierung.</p>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-white border border-gray-200 overflow-hidden">
+              {/* PLATZHALTER: Restaurant Bild */}
+              <div className="bg-gray-100 h-40 border-b-2 border-dashed border-gray-200 flex items-center justify-center">
+                <span className="text-gray-400 text-xs">🖼️ Bild: Restaurant / Speisekarte</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2">🍽️ Restaurant</h3>
+                <p className="text-gray-500">Speisekarte, Öffnungszeiten, Reservierung.</p>
+              </div>
             </div>
-            <div className="bg-white border border-gray-200 p-8">
-              <h3 className="text-lg font-bold mb-2">🏥 Praxis / Therapie</h3>
-              <p className="text-gray-500">Vita, Methoden, Terminbuchung.</p>
+            <div className="bg-white border border-gray-200 overflow-hidden">
+              {/* PLATZHALTER: Praxis Bild */}
+              <div className="bg-gray-100 h-40 border-b-2 border-dashed border-gray-200 flex items-center justify-center">
+                <span className="text-gray-400 text-xs">🖼️ Bild: Praxis / Therapie</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2">🏥 Praxis / Therapie</h3>
+                <p className="text-gray-500">Vita, Methoden, Terminbuchung.</p>
+              </div>
             </div>
-            <div className="bg-white border border-gray-200 p-8">
-              <h3 className="text-lg font-bold mb-2">🔨 Handwerk</h3>
-              <p className="text-gray-500">Leistungen, Referenzen, direkte Anfrage.</p>
+            <div className="bg-white border border-gray-200 overflow-hidden">
+              {/* PLATZHALTER: Handwerk Bild */}
+              <div className="bg-gray-100 h-40 border-b-2 border-dashed border-gray-200 flex items-center justify-center">
+                <span className="text-gray-400 text-xs">🖼️ Bild: Handwerk / Werkstatt</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2">🔨 Handwerk</h3>
+                <p className="text-gray-500">Leistungen, Referenzen, direkte Anfrage.</p>
+              </div>
             </div>
-            <div className="bg-white border border-gray-200 p-8">
-              <h3 className="text-lg font-bold mb-2">💼 Selbstständige</h3>
-              <p className="text-gray-500">Profil, Angebot, Philosophie, Kontakt.</p>
+            <div className="bg-white border border-gray-200 overflow-hidden">
+              {/* PLATZHALTER: Selbstständige Bild */}
+              <div className="bg-gray-100 h-40 border-b-2 border-dashed border-gray-200 flex items-center justify-center">
+                <span className="text-gray-400 text-xs">🖼️ Bild: Selbstständige / Büro</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-bold mb-2">💼 Selbstständige</h3>
+                <p className="text-gray-500">Profil, Angebot, Philosophie, Kontakt.</p>
+              </div>
             </div>
           </div>
         </div>
