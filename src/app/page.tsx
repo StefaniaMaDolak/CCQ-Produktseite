@@ -41,7 +41,6 @@ END:VCARD`;
               <div className="mt-8">
                 <a
                   href={vcardUri}
-                  download="ccq.vcf"
                   className="inline-block bg-black text-white font-bold py-4 px-8 hover:bg-gray-800 transition"
                 >
                   📇 Als Kontakt speichern
