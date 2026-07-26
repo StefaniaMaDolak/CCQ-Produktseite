@@ -155,40 +155,28 @@ export default function Home() {
           <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-16">Für wen?</h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="bg-white border border-gray-200 overflow-hidden">
-              {/* PLATZHALTER: Restaurant Bild */}
-              <div className="bg-gray-100 h-40 border-b-2 border-dashed border-gray-200 flex items-center justify-center">
-                <span className="text-gray-400 text-xs">🖼️ Bild: Restaurant / Speisekarte</span>
-              </div>
+              <img src="/restaurant.jpg" alt="Restaurant mit CCQ Charactercard" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h3 className="text-lg font-bold mb-2">🍽️ Restaurant</h3>
                 <p className="text-gray-500">Speisekarte, Öffnungszeiten, Reservierung.</p>
               </div>
             </div>
             <div className="bg-white border border-gray-200 overflow-hidden">
-              {/* PLATZHALTER: Praxis Bild */}
-              <div className="bg-gray-100 h-40 border-b-2 border-dashed border-gray-200 flex items-center justify-center">
-                <span className="text-gray-400 text-xs">🖼️ Bild: Praxis / Therapie</span>
-              </div>
+              <img src="/praxis.jpg" alt="Praxis mit CCQ Charactercard" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h3 className="text-lg font-bold mb-2">🏥 Praxis / Therapie</h3>
                 <p className="text-gray-500">Vita, Methoden, Terminbuchung.</p>
               </div>
             </div>
             <div className="bg-white border border-gray-200 overflow-hidden">
-              {/* PLATZHALTER: Handwerk Bild */}
-              <div className="bg-gray-100 h-40 border-b-2 border-dashed border-gray-200 flex items-center justify-center">
-                <span className="text-gray-400 text-xs">🖼️ Bild: Handwerk / Werkstatt</span>
-              </div>
+              <img src="/handwerk.jpg" alt="Handwerk mit CCQ Charactercard" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h3 className="text-lg font-bold mb-2">🔨 Handwerk</h3>
                 <p className="text-gray-500">Leistungen, Referenzen, direkte Anfrage.</p>
               </div>
             </div>
             <div className="bg-white border border-gray-200 overflow-hidden">
-              {/* PLATZHALTER: Selbstständige Bild */}
-              <div className="bg-gray-100 h-40 border-b-2 border-dashed border-gray-200 flex items-center justify-center">
-                <span className="text-gray-400 text-xs">🖼️ Bild: Selbstständige / Büro</span>
-              </div>
+              <img src="/selbstaendig.jpg" alt="Selbstständige mit CCQ Charactercard" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h3 className="text-lg font-bold mb-2">💼 Selbstständige</h3>
                 <p className="text-gray-500">Profil, Angebot, Philosophie, Kontakt.</p>
