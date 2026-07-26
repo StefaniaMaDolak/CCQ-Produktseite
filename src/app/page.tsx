@@ -1,3 +1,7 @@
+"use client";
+
+import SaveContactButton from "@/components/SaveContactButton";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black">
@@ -24,14 +28,10 @@ export default function Home() {
               <p className="text-xl text-gray-500">
                 Immer griffbereit. Auf jedem Handy. Ohne App.
               </p>
-              <div className="mt-8 text-center">
-                <img
-                  src="/api/qr"
-                  alt="QR-Code: Direkt als Kontakt speichern"
-                  className="mx-auto w-48 h-48 border border-gray-200 rounded-lg"
-                />
-                <p className="text-sm text-gray-500 mt-3">
-                  📱 Kamera öffnen → scannen → „Kontakt hinzufügen?"
+              <div className="mt-8">
+                <SaveContactButton />
+                <p className="text-sm text-gray-400 mt-2">
+                  Funktioniert auf iPhone & Android
                 </p>
               </div>
             </div>
