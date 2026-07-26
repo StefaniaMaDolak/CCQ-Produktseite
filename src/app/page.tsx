@@ -2,15 +2,16 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       {/* Header */}
-      <header className="bg-slate-900 text-white py-6 px-4">
+      <header className="bg-white text-slate-900 py-4 px-4 border-b border-gray-100">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-              <span className="text-slate-900 font-bold text-xl">Q</span>
-            </div>
-            <h1 className="text-xl font-bold tracking-wide">CCQ CHARACTERCARD</h1>
+          <div className="flex items-center gap-4">
+            <img 
+              src="/logo.jpg" 
+              alt="CCQ Charactercard Logo" 
+              className="h-16 w-auto"
+            />
           </div>
-          <p className="text-sm text-gray-300 hidden sm:block">
+          <p className="text-sm text-gray-500 hidden sm:block italic">
             Erkannt werden für das, was wirklich zählt.
           </p>
         </div>
