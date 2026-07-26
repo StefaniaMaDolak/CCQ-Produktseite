@@ -26,7 +26,7 @@ export default function Home() {
               </p>
               <div className="mt-8">
                 <a
-                  href="/contact.vcf"
+                  href="/api/vcard"
                   className="inline-block bg-black text-white font-bold py-4 px-8 hover:bg-gray-800 transition"
                 >
                   📇 Als Kontakt speichern
