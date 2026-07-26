@@ -10,10 +10,6 @@ const nextConfig: NextConfig = {
             key: "Content-Type",
             value: "text/vcard",
           },
-          {
-            key: "Content-Disposition",
-            value: "inline",
-          },
         ],
       },
     ];
