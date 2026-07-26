@@ -1,8 +1,6 @@
-"use client";
-
 export default function Home() {
-  const handleSaveContact = () => {
-    const vcard = `BEGIN:VCARD
+  // vCard als Data-URI für maximale Kompatibilität
+  const vcardData = `BEGIN:VCARD
 VERSION:3.0
 FN:CCQ
 N:CCQ;;;;
@@ -13,18 +11,7 @@ URL:https://ccq-produktseite.vercel.app
 NOTE:Erkannt werden fuer das\, was wirklich zaehlt. Digitale Visitenkarte via CCQ Charactercard.
 END:VCARD`;
 
-    const blob = new Blob([vcard], { type: "text/vcard" });
-    const url = window.URL.createObjectURL(blob);
-    
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "ccq.vcf";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    
-    window.URL.revokeObjectURL(url);
-  };
+  const vcardUri = `data:text/vcard;charset=utf-8,${encodeURIComponent(vcardData)}`;
 
   return (
     <main className="min-h-screen bg-white text-black">
@@ -52,12 +39,13 @@ END:VCARD`;
                 Immer griffbereit. Auf jedem Handy. Ohne App.
               </p>
               <div className="mt-8">
-                <button
-                  onClick={handleSaveContact}
-                  className="inline-block bg-black text-white font-bold py-4 px-8 hover:bg-gray-800 transition cursor-pointer"
+                <a
+                  href={vcardUri}
+                  download="ccq.vcf"
+                  className="inline-block bg-black text-white font-bold py-4 px-8 hover:bg-gray-800 transition"
                 >
                   📇 Als Kontakt speichern
-                </button>
+                </a>
                 <p className="text-xs text-gray-400 mt-3">
                   Funktioniert auf iPhone & Android
                 </p>
@@ -143,7 +131,7 @@ END:VCARD`;
         </div>
       </section>
 
-      {/* So funktioniert es — mit QR-Code Bild */}
+      {/* So funktioniert es */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-16">So funktioniert es</h2>
@@ -176,7 +164,7 @@ END:VCARD`;
         </div>
       </section>
 
-      {/* Für wen — mit Bildern */}
+      {/* Für wen */}
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-16">Für wen?</h2>
