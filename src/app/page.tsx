@@ -1,18 +1,4 @@
 export default function Home() {
-  // vCard als Data-URI für maximale Kompatibilität
-  const vcardData = `BEGIN:VCARD
-VERSION:3.0
-FN:CCQ
-N:CCQ;;;;
-ORG:CCQ Charactercard
-TEL;TYPE=CELL:+41 79 000 00 00
-EMAIL;TYPE=WORK:hello@ccq-card.ch
-URL:https://ccq-produktseite.vercel.app
-NOTE:Erkannt werden fuer das\, was wirklich zaehlt. Digitale Visitenkarte via CCQ Charactercard.
-END:VCARD`;
-
-  const vcardUri = `data:text/vcard;charset=utf-8,${encodeURIComponent(vcardData)}`;
-
   return (
     <main className="min-h-screen bg-white text-black">
       {/* Header */}
@@ -40,7 +26,7 @@ END:VCARD`;
               </p>
               <div className="mt-8">
                 <a
-                  href={vcardUri}
+                  href="/contact.vcf"
                   className="inline-block bg-black text-white font-bold py-4 px-8 hover:bg-gray-800 transition"
                 >
                   📇 Als Kontakt speichern
@@ -76,7 +62,6 @@ END:VCARD`;
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">Profil</h3>
                 <p className="text-gray-500">Wer du bist. Was du machst. Wie man dich erreicht.</p>
-                {/* PLATZHALTER: Profil-Beispiel */}
                 <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
                   <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Profil-Bereich</span>
                 </div>
@@ -87,7 +72,6 @@ END:VCARD`;
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">Charakter</h3>
                 <p className="text-gray-500">Die Geschichte dahinter. Deine Werte.</p>
-                {/* PLATZHALTER: Charakter-Beispiel */}
                 <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
                   <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Charakter-Bereich</span>
                 </div>
@@ -98,7 +82,6 @@ END:VCARD`;
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">Team / Netzwerk</h3>
                 <p className="text-gray-500">Dein Team, deine Partner oder deine Zielgruppe.</p>
-                {/* PLATZHALTER: Team-Beispiel */}
                 <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
                   <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Team/Netzwerk</span>
                 </div>
@@ -109,7 +92,6 @@ END:VCARD`;
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">Angebot</h3>
                 <p className="text-gray-500">Was du bietest. Klar und übersichtlich.</p>
-                {/* PLATZHALTER: Angebot-Beispiel */}
                 <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
                   <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Angebot/Speisekarte</span>
                 </div>
@@ -120,7 +102,6 @@ END:VCARD`;
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">Specials</h3>
                 <p className="text-gray-500">Das Besondere. Tipps, Wissen, Geschenke.</p>
-                {/* PLATZHALTER: Specials-Beispiel */}
                 <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
                   <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Specials-Bereich</span>
                 </div>
@@ -138,7 +119,6 @@ END:VCARD`;
             <div className="border border-gray-200 p-8 text-center">
               <div className="text-5xl font-bold text-gray-100 mb-4">01</div>
               <h3 className="text-lg font-bold">Scannen</h3>
-              {/* PLATZHALTER: QR-Code */}
               <div className="mt-4 bg-gray-100 rounded-xl p-4 border-2 border-dashed border-gray-300 aspect-square max-w-[120px] mx-auto flex items-center justify-center">
                 <span className="text-gray-400 text-xs">📷 QR-Code</span>
               </div>
@@ -146,7 +126,6 @@ END:VCARD`;
             <div className="border border-gray-200 p-8 text-center">
               <div className="text-5xl font-bold text-gray-100 mb-4">02</div>
               <h3 className="text-lg font-bold">Speichern</h3>
-              {/* PLATZHALTER: Speichern Animation */}
               <div className="mt-4 bg-gray-100 rounded-xl p-4 border-2 border-dashed border-gray-300 aspect-square max-w-[120px] mx-auto flex items-center justify-center">
                 <span className="text-gray-400 text-xs">📷 Speichern</span>
               </div>
@@ -154,7 +133,6 @@ END:VCARD`;
             <div className="border border-gray-200 p-8 text-center">
               <div className="text-5xl font-bold text-gray-100 mb-4">03</div>
               <h3 className="text-lg font-bold">Immer dabei</h3>
-              {/* PLATZHALTER: Kontakte-App */}
               <div className="mt-4 bg-gray-100 rounded-xl p-4 border-2 border-dashed border-gray-300 aspect-square max-w-[120px] mx-auto flex items-center justify-center">
                 <span className="text-gray-400 text-xs">📷 Kontakt</span>
               </div>
