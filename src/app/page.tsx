@@ -1,6 +1,6 @@
 "use client";
 
-import SaveContactButton from "@/components/SaveContactButton";
+import EmailVCardButton from "@/components/EmailVCardButton";
 
 export default function Home() {
   return (
@@ -29,9 +29,9 @@ export default function Home() {
                 Immer griffbereit. Auf jedem Handy. Ohne App.
               </p>
               <div className="mt-8">
-                <SaveContactButton />
+                <EmailVCardButton />
                 <p className="text-sm text-gray-400 mt-2">
-                  Funktioniert auf iPhone & Android
+                  📱 Du bekommst eine Mail mit dem Direkt-Link
                 </p>
               </div>
             </div>
