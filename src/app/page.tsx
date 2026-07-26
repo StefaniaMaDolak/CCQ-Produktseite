@@ -27,8 +27,8 @@ export default function Home() {
               <div className="mt-8">
                 <a
                   href="/contact.vcf"
-                  download="Stefania-Dolak.vcf"
-                  className="inline-block bg-black text-white font-bold py-4 px-8 hover:bg-gray-800 transition">
+                  className="inline-block bg-black text-white font-bold py-4 px-8 hover:bg-gray-800 transition"
+                >
                   📇 Als Kontakt speichern
                 </a>
                 <p className="text-xs text-gray-400 mt-3">
