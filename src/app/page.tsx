@@ -24,15 +24,14 @@ export default function Home() {
               <p className="text-xl text-gray-500">
                 Immer griffbereit. Auf jedem Handy. Ohne App.
               </p>
-              <div className="mt-8">
-                <a
-                  href="/api/vcard"
-                  className="inline-block bg-black text-white font-bold py-4 px-8 hover:bg-gray-800 transition"
-                >
-                  📇 Als Kontakt speichern
-                </a>
-                <p className="text-xs text-gray-400 mt-3">
-                  Funktioniert auf iPhone & Android
+              <div className="mt-8 text-center">
+                <img
+                  src="/api/qr"
+                  alt="QR-Code: Direkt als Kontakt speichern"
+                  className="mx-auto w-48 h-48 border border-gray-200 rounded-lg"
+                />
+                <p className="text-sm text-gray-500 mt-3">
+                  📱 Kamera öffnen → scannen → „Kontakt hinzufügen?"
                 </p>
               </div>
             </div>
