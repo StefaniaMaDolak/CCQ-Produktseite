@@ -1,6 +1,6 @@
 "use client";
 
-import EmailVCardButton from "@/components/EmailVCardButton";
+import SaveContactButton from "@/components/SaveContactButton";
 
 export default function Home() {
   return (
@@ -29,9 +29,9 @@ export default function Home() {
                 Immer griffbereit. Auf jedem Handy. Ohne App.
               </p>
               <div className="mt-8">
-                <EmailVCardButton />
+                <SaveContactButton />
                 <p className="text-sm text-gray-400 mt-2">
-                  📱 Du bekommst eine Mail mit dem Direkt-Link
+                  📱 iPhone: Im Share-Sheet nach rechts scrollen → „Kontakte" auswählen
                 </p>
               </div>
             </div>
