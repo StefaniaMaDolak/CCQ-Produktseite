@@ -51,61 +51,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5 Bereiche */}
+      {/* 5 Bereiche — Vertikale Steps mit Linien */}
       <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-16">Die 5 Bereiche</h2>
-          <div className="space-y-12">
-            <div className="flex gap-8 items-start">
-              <span className="text-4xl font-bold text-gray-200">01</span>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold mb-1">Profil</h3>
-                <p className="text-gray-500">Wer du bist. Was du machst. Wie man dich erreicht.</p>
-                <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
-                  <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Profil-Bereich</span>
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-16 text-center">
+            Die 5 Bereiche
+          </h2>
+
+          <div className="relative">
+            {/* Vertikale Linie */}
+            <div className="absolute left-8 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-px bg-gray-300" />
+
+            {[
+              {
+                num: "1",
+                title: "Profil",
+                desc: "Wer du bist. Was du machst. Wie man dich erreicht.",
+                align: "left",
+              },
+              {
+                num: "2",
+                title: "Charakter",
+                desc: "Die Geschichte dahinter. Deine Werte. Dein Warum.",
+                align: "right",
+              },
+              {
+                num: "3",
+                title: "Team / Netzwerk",
+                desc: "Dein Team, deine Partner oder deine Zielgruppe.",
+                align: "left",
+              },
+              {
+                num: "4",
+                title: "Angebot",
+                desc: "Was du bietest. Klar und übersichtlich.",
+                align: "right",
+              },
+              {
+                num: "5",
+                title: "Specials",
+                desc: "Das Besondere. Tipps, Wissen, Geschenke.",
+                align: "left",
+              },
+            ].map((step, i) => (
+              <div
+                key={step.num}
+                className={`relative flex items-center gap-8 mb-16 last:mb-0 ${
+                  step.align === "right" ? "md:flex-row-reverse" : ""
+                }`}
+              >
+                {/* Zahl-Kreis */}
+                <div className="relative z-10 flex-shrink-0 w-16 h-16 rounded-full bg-white border-2 border-gray-300 flex items-center justify-center shadow-sm">
+                  <span className="text-2xl font-light text-gray-400">{step.num}</span>
+                </div>
+
+                {/* Inhalt */}
+                <div
+                  className={`flex-1 bg-white p-6 rounded-xl border border-gray-200 shadow-sm ${
+                    step.align === "right" ? "md:text-right" : ""
+                  }`}
+                >
+                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
+                  <div className="mt-4 bg-gray-50 rounded-lg p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-20">
+                    <span className="text-gray-400 text-xs">🖼️ Bild: {step.title}-Bereich</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex gap-8 items-start">
-              <span className="text-4xl font-bold text-gray-200">02</span>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold mb-1">Charakter</h3>
-                <p className="text-gray-500">Die Geschichte dahinter. Deine Werte.</p>
-                <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
-                  <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Charakter-Bereich</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-8 items-start">
-              <span className="text-4xl font-bold text-gray-200">03</span>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold mb-1">Team / Netzwerk</h3>
-                <p className="text-gray-500">Dein Team, deine Partner oder deine Zielgruppe.</p>
-                <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
-                  <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Team/Netzwerk</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-8 items-start">
-              <span className="text-4xl font-bold text-gray-200">04</span>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold mb-1">Angebot</h3>
-                <p className="text-gray-500">Was du bietest. Klar und übersichtlich.</p>
-                <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
-                  <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Angebot/Speisekarte</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-8 items-start">
-              <span className="text-4xl font-bold text-gray-200">05</span>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold mb-1">Specials</h3>
-                <p className="text-gray-500">Das Besondere. Tipps, Wissen, Geschenke.</p>
-                <div className="mt-4 bg-white rounded-xl p-4 border-2 border-dashed border-gray-200 flex items-center justify-center h-24">
-                  <span className="text-gray-400 text-xs">🖼️ Bild: Beispiel Specials-Bereich</span>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
